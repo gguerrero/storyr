@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= t('app.name') %></title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+  <![endif]-->
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <%= render 'layouts/content' %>
+  <%= render 'layouts/footer' %>
+  <!--%= content_tag(:div, debug(params), id: "debug") if Rails.env.development? %-->
+</body>
+</html>

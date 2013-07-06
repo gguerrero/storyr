@@ -1,0 +1,17 @@
+<div id="footer" class="sticky">
+  <div id="footer-content" class="container">
+    <ul class="left-menu">
+      <li>
+        <%= link_to t('footer.contact'), contact_path %>
+    </ul>
+    <div class="white-bubble">
+      <%= content_tag :div %>
+    </div>
+    <ul class="right-menu">
+      <li>
+        <%= link_to t('footer.about'), about_path %>
+      </li>
+    </ul>
+    <%= content_tag :div, t('app.copyright'), id: 'copyright' %>
+  </div>
+</div>
