@@ -1,0 +1,31 @@
+<div class="standard-form">
+  <%= form_for(@user) do |f| %>
+    <%= render 'layouts/errors', object: @user %>
+
+    <div id="user-fields">
+      <%= f.labeled_field :name %>
+      <%= f.labeled_field :fullname %>
+      <%= f.labeled_field :email %>
+      <%= f.labeled_field :password, :password_field %>
+      <%= f.labeled_field :password_confirmation, :password_field %>
+      <% if current_user.admin? %>
+      <div class="field">
+        <%= f.label :admin %>
+        <%= f.check_box :admin %>
+      </div>
+      <% end %>
+      
+      <div class="actions">
+        <%= f.submit t('actions.save'), class: 'button' %>
+        <%= link_to t('actions.back'), users_path, class: 'smooth-action' %>
+      </div>
+    </div>
+
+    <% unless @user.new_record? %>
+    <div id="user-gravatar" class="user-gravatar">
+    <%= link_to gravatar_for(@user, size: 300, class: "gravatar border round shadow"),
+                "http://gravatar.com/emails", target: 'blank' %>
+    </div>
+    <% end %>
+  <% end %>
+</div>

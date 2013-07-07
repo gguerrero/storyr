@@ -1,0 +1,41 @@
+<li class="user-info soft-round shadow">
+  <div class="user-gravatar">
+    <%= link_to gravatar_for(user, class: "gravatar border round shadow"),
+                edit_user_path(user) %>
+  </div>
+
+  <div class="user-data">
+    <div class="user-name">
+      <%= user.fullname %>
+      <%= link_to "[#{user.name}]", edit_user_path(user), class: 'alias' %>
+    </div>
+
+    <div class="user-email">
+      <%= link_to user.email, 
+                  "mailto:#{user.email}?subject=Aquitectar%20Admin" %>
+    </div>
+
+    <div class="user-admin">
+      <%= t('users.admin') %>:
+      <%= check_box_image_tag(user.admin?) %>
+    </div>
+  </div>
+
+  <div class="user-actions">
+    <ul>
+      <% if current_user.admin? or user.name == current_user.name %>
+      <li class="action">
+        <%= link_to t('actions.edit'), edit_user_path(user), class: 'button' %>
+      </li>
+      <% end %>
+      <% if current_user.admin? and user.name != current_user.name %>
+      <li class="action">
+        <%= link_to t('actions.destroy'), user, 
+                    method: :delete, 
+                    data: { confirm: 'Are you sure?' },
+                    class: 'button' %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</li>

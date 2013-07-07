@@ -1,0 +1,20 @@
+<div id="user-index" class="panel round shadow">
+  <div id="user-index-title" class="content-header">
+    <h1><%= t('users.list') %></h1>
+  </div>
+
+  <%= render 'layouts/flashes' %>
+  <div id="user-index-content" class="user-list-content">
+    <% if current_user.admin? %>
+    <div id="user-new-link">
+      <%= link_to t('actions.new', item: t('users.user')), 
+                  new_user_path, class: "button" %>
+    </div>
+    <% end %>
+
+    <div id="user-index-list">
+      <ul><%= render @users %></ul>
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>

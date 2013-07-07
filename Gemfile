@@ -1,7 +1,12 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+
+# Using PostgreSQL as all environment databases
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -25,6 +30,34 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Global Recognized Avatar
+gem 'gravatar_image_tag'
+
+# Active Record Pagination
+gem 'will_paginate'
+
+group :development do
+  gem 'faker'
+  gem 'pry'
+  gem 'hirb'
+  gem 'better_errors'
+  gem 'meta_request'
+end
+
+group :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'webrat'
+  gem 'spork'
+  gem 'spork-rails', git: 'git://github.com/koriroys/spork-rails.git'
+  gem 'factory_girl_rails'
+end
+
+group :production do
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -41,20 +74,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-group :development do
-  # Use sqlite3 as the database for Active Record (Development)
-  gem 'sqlite3'
-end
-
-group :test do
-  gem 'rspec'
-  gem 'rspec-rails'
-  gem 'cucumber'
-  gem 'cucumber-rails'
-end
-
-group :production do
-  # Use sqlite3 as the database for Active Record (Heroku)
-  gem 'pg'
-end

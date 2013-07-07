@@ -21,6 +21,7 @@ Storyr::Application.routes.draw do
 
     # Resources
     resources :users
+    resources :sessions
   end
 
   # Example of regular route:

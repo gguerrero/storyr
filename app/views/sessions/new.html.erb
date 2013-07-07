@@ -1,0 +1,25 @@
+<div id="signin-box" class="border round shadow">
+  <div id="signin-title" class="content-header">
+    <h1><%=t 'session.signin' %></h1>
+  </div>
+
+  <%= form_for(:session, url: sessions_path) do |f| %>
+    <div id="signin-body">
+      <%= render 'layouts/flashes' %>
+      <div class="field">
+        <%= f.label :username, t('session.username') %>
+        <%= f.text_field :username %>
+      </div>
+      <div class="field">
+        <%= f.label :password, t('session.password') %>
+        <%= f.password_field :password %>
+      </div>
+    </div>
+
+    <div id="signin-submit">
+      <div class="field">
+        <%= f.submit t('session.enter') + " !", class: "button" %>
+      </div>
+    </div>
+  <% end %>
+</div>
