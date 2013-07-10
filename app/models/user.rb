@@ -21,6 +21,9 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
 
+  has_many :stories
+  has_many :rates
+
   def has_password?(submitted_password)
     self.encrypted_password == encrypt(submitted_password)
   end

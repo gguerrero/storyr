@@ -1,0 +1,47 @@
+.field_with_errors {
+  label {}
+  input {
+    border: 1px solid #FF0A0A !important;
+  }
+}
+
+#error_explanation {
+  width: 70%;
+  border: 1px solid #FF0000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding-bottom: 0;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  background-color: #FFDADA;
+  background-image: -moz-linear-gradient(#FFDADA, #FDACAC);
+  background-image: -webkit-linear-gradient(#FFDADA, #FDACAC);
+  background-image: linear-gradient(#FFDADA, #FDACAC);
+  background-repeat: repeat-x;
+
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    padding: 10px 15px;
+    font-size: 1.3em;
+    background-color: #F58181;
+    background-image: -moz-linear-gradient(#EC2424, #F58181);
+    background-image: -webkit-linear-gradient(#EC2424, #F58181);
+    background-image: linear-gradient(#EC2424, #F58181);
+    background-repeat: repeat-x;
+    color: #fff;
+  }
+
+  ul {
+    margin: 0px;
+    padding: 15px 30px;
+    li {
+      font-size: 1.1em;
+      list-style: none;
+      list-style-image: image-url('actions/list-arrow.png');
+      color: #532A01;
+    }
+  }
+}

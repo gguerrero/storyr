@@ -1,0 +1,35 @@
+.flash {
+  width: 95%;
+  margin: 10px auto;
+
+  .flash-content {
+    padding: 10px 15px;
+    color: white; 
+    font-size: 1.1em;
+    font-weight: bold;
+
+    &.error, &.warning {
+      background-color: #F58181;
+      background-image: -moz-linear-gradient(#EC2424, #F58181);
+      background-image: -webkit-linear-gradient(#EC2424, #F58181);
+      background-image: linear-gradient(#EC2424, #F58181);
+      background-repeat: repeat-x;
+      border: 1px solid #FF0000;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+    
+    &.success, &.notice {
+      background-color: #66B966;
+      background-image: -moz-linear-gradient(#1C991C, #66B966);
+      background-image: -webkit-linear-gradient(#1C991C, #66B966);
+      background-image: linear-gradient(#1C991C, #66B966);
+      background-repeat: repeat-x;
+      border: 1px solid #086F19;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+  }
+}

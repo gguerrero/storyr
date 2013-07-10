@@ -1,0 +1,98 @@
+.field {
+  padding: 10px 20px 5px 20px;
+
+  label {
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #141414;
+  }
+
+  input[type="text"], 
+  input[type="password"], 
+  input[type="number"] {
+    width: 100%;
+    min-height: 35px;
+    padding: 4px 8px;
+    outline: none;
+    vertical-align: middle;
+    color: #141414;
+    font-size: 1.2em;
+    border: 1px solid #141414;
+    background: transparent;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: all 0.25s ease-in;
+    -webkit-transition: all 0.25s ease-in 0;
+
+    &:focus {
+      border-color: #3C3C3C;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    }
+  }
+}
+
+.actions {
+  padding: 10px 20px 5px 20px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 6px 10px;
+  color: #fafafa !important;
+  font-weight: bold;
+  white-space: nowrap;
+  background-color: #3C3C3C;
+  background-image: -moz-linear-gradient(#3C3C3C, #141414);
+  background-image: -webkit-linear-gradient(#3C3C3C, #141414);
+  background-image: linear-gradient(#3C3C3C, #141414);
+  background-repeat: repeat-x;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #141414;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+
+  &:hover {
+    background-color: #141414;
+    background-image: -moz-linear-gradient(#141414, #3C3C3C);
+    background-image: -webkit-linear-gradient(#141414, #3C3C3C);
+    background-image: linear-gradient(#141414, #3C3C3C);
+  }
+}
+
+.smooth-action {
+  vertical-align: bottom;
+  font-size: 1.1em;
+  padding: 0px 10px;
+  &:hover { text-decoration: underline; }
+}
+
+.standard-form {
+  margin: 15px 0px;
+
+  input[type="text"], 
+  input[type="password"], 
+  input[type="number"] {
+    min-width: 15%;
+    // max-width: 35%;
+  }
+}
