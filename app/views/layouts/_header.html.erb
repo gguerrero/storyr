@@ -2,4 +2,32 @@
   <div id="logo">
     <%= link_to t('app.name'), root_path %>
   </div>
+
+  <div id="user-menu">
+  <% if signed_in? %>
+    <div class="menu menu-expanded">
+      <div class="menu-icon">
+        <%= gravatar_for(current_user, size: 30) %>
+      </div>
+      <div class="menu-arrow"></div>
+      <ul class="menu-options">
+        <li>
+          <%= link_to t('users.preferences'),
+                      edit_user_path(current_user) %>
+        </li>
+        <li>
+          <%= link_to t('users.list'), users_path %>
+        </li>
+        <li>
+          <%= link_to t('session.signout'), signout_path, method: :delete %>
+        </li>
+      </ul>
+    </div>
+  <% else %>
+      <ul>
+        <li><%= link_to t('session.signup'), signup_path %></li>
+        <li><%= link_to t('session.signin'), signin_path %></li>
+      </ul>
+  <% end %>
+  </div>
 </div>

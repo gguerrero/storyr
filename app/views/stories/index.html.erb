@@ -1,0 +1,13 @@
+<div id="story-index" class="panel round shadow">
+  <div id="story-index-title" class="content-header">
+    <h1><%= t('stories.list') %></h1>
+  </div>
+
+  <%= render 'layouts/flashes' %>
+  <div id="story-index-content" class="story-list-content">
+    <div id="story-index-list">
+      <ul><%= render @stories %></ul>
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>

@@ -20,7 +20,11 @@ Storyr::Application.routes.draw do
     delete 'signout'       => 'sessions#destroy'
 
     # Resources
-    resources :users
+    resources :users do
+      resources :stories do
+        resources :rates
+      end
+    end
     resources :sessions
   end
 

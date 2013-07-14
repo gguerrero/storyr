@@ -16,7 +16,6 @@ body {
   background: -ms-linear-gradient(top, #8fbf1f 0%,#93bc34 100%); /* IE10+ */
   background: linear-gradient(to bottom, #8fbf1f 0%,#93bc34 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fbf1f', endColorstr='#93bc34',GradientType=0 ); /* IE6-9 */
-  background-repeat: no-repeat;
 
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -46,11 +45,11 @@ body {
   color: #141414;
 
   a {
-    color: #8fbf1f;
+    color: #1a1a1a;
     text-decoration: none;
 
     :hover,:active {
-      text-shadow: 0px 0px 3px #8fbf1f;
+      text-shadow: 0px 0px 3px #1a1a1a;
     }
   }
 

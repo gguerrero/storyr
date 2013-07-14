@@ -1,0 +1,28 @@
+<li class="story-info triangle-border">
+  <div class="story-user" style="font-size: 1.3em;">
+    <%= story.user.fullname %>
+  </div>
+  <div class="story-title">
+    <%= story.title %>
+  </div>
+
+  <div class="story-tags">
+    <%= story.tags %>
+  </div>
+
+  <div class="story-date">
+    <%= story.published_on %>
+  </div>
+
+  <div class="story-description">
+    <%= story.description %>
+  </div>
+
+  <% if current_user? @user %>
+  <div class="story-destroy">
+    <%= link_to t('actions.destroy'), [@user, story],
+                                      method: :delete,
+                                      data: { confirm: "Are you sure?" } %>
+  </div>
+  <% end %>
+</li>

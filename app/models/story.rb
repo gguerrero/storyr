@@ -3,7 +3,7 @@ class Story < ActiveRecord::Base
   has_many   :rates
 
   validates_presence_of   :title, :user_id
-  validates_uniqueness_of :title
+  validates_uniqueness_of :title, scope: :user_id
   validates               :title,       length: { within: 3..40 }
   validates               :description, length: { maximum: 140 }
 

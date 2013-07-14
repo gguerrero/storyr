@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       @title = t('session.signin')
       render :new
     else
-      sign_in user
+      sign_in user, booleanize(session_params[:permanent])
       # For a friendly redirect, avoid "redirect_to user"
       redirect_back_or user
     end      
@@ -29,6 +29,6 @@ class SessionsController < ApplicationController
   end
 
   def session_params_white_list
-    %i(username password)
+    %i(username password permanent)
   end
 end

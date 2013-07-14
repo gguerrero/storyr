@@ -7,7 +7,7 @@
 
 #header {
   width: 100%;
-  height: 55px;
+  height: 50px;
   background: #141414;
   opacity: 0.95;
   -moz-box-shadow: 0px 2px 10px #141414;
@@ -22,10 +22,110 @@
     a{
       display: block;
       text-indent: -9999px;
-      width: 133px;
-      height: 100px;
+      width: 110px;
+      height: 83px;
       background: url('storyr_logo.png') center center no-repeat;
       background-size: cover;
     }
   }
+
+  #user-menu {
+    .menu {
+      position: absolute;
+      top: 5px;
+      right: 65px;
+      cursor: pointer;
+
+      .menu-icon {
+        position: absolute;
+        top: 5px;
+        left: 3px;
+        img { border-radius: 3px; }
+      }
+      .menu-arrow {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: image-url('arrow.png');
+        width: 55px;
+        height: 40px;
+      }
+
+      ul.menu-options {
+        position: absolute;
+        top: 55px;
+        right: -60px;
+        z-index: 10;
+
+        opacity: 0; 
+        transition: opacity 0.3s linear;
+        -webkit-transition: opacity 0.3s linear;
+       
+        &.menu-expanded {
+          opacity: 0.98;
+        }
+
+        li {
+          position: relative;
+          font-size: 1.2em;
+          border-top: 1px solid #0f0f0f;
+          border-bottom: 1px solid #111111;
+          padding: 8px 20px;
+          background: #141414;
+
+          &:hover,&:active {
+            background: #0f0f0f;
+            a { 
+              color: #8fbf1f;
+              text-shadow: 0px 0px 1px #8fbf1f;
+
+              &:after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                bottom: 3px;
+                right: 3px;
+                width: 4px;
+                background: #8fbf1f;
+              }
+            }
+          }
+
+          &:first-child {
+            border-top: 0px;
+            -webkit-border-top-left-radius: 4px;
+            -webkit-border-top-right-radius: 4px;
+            -moz-border-radius-topleft: 4px;
+            -moz-border-radius-topright: 4px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+          }
+
+          &:last-child {
+            border-bottom: 0px;
+            -webkit-border-bottom-right-radius: 4px;
+            -webkit-border-bottom-left-radius: 4px;
+            -moz-border-radius-bottomright: 4px;
+            -moz-border-radius-bottomleft: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+        } 
+
+        &:before {
+          content: "";
+          border-width: 0 8px 8px;
+          border-style: solid;
+          border-color: #141414 transparent;
+          position: absolute;
+          top: -8px;
+          right: 30px;
+          bottom: auto;
+          left: auto;
+        }
+      }
+
+    }
+  }
+
 }

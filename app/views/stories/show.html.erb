@@ -1,0 +1,10 @@
+<div id="user-show" class="panel round shadow">
+  <div id="user-show-title" class="content-header">
+    <h1><%= t('users.list') %></h1>
+  </div>
+
+  <%= render 'layouts/flashes' %>
+  <div id="user-show-content" class="user-content">
+    <%= render @user %>
+  </div>
+</div>
